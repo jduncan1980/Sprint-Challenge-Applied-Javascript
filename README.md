@@ -45,6 +45,7 @@ An event listener is a piece of code that you write, which is attached to a spec
 The main reason would be that NodeLists, which are Array-Like objects, while having a similar structure to Arrays, do not have access to all the methods that arrays do (ie. map, filter, etc), so we would convert them (usually with the Array.from() method) so as to more efficiently operate on them. They do have their own forEach method, though, which is where they differ from another Array-Like object, the HTMLCollection (which does not even have a forEach method... it is, however a "live" collection, meaning it always points to the current items in the list, as opposed to the nodelist, which is static, and only refers to the objects in it at the time of creation).
 
 5. What is a component?
+
    A component is a reusable piece of code that can be used to create as many of a certain element as you need. It is a function used to create HTML, assign it's content, classes, attributes, etc... and append it to the DOM (as opposed to just writing the HTML directly).
 
 ### Git Set up
