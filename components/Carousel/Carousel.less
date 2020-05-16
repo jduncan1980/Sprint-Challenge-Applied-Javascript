@@ -7,9 +7,12 @@
 	margin-top: 16px;
 	@media (min-width: 1200px) {
 		width: 1200px;
+		position: relative;
 	}
 	.left-button,
 	.right-button {
+		position: relative;
+		z-index: 1000;
 		.flex(center);
 		color: @lambda-times-color-white;
 		background-color: @lambda-times-color-primary;
@@ -37,10 +40,18 @@
 	}
 	img {
 		.width-100();
-		display: none;
+		// display: none;
+		opacity: 0;
+		transition: all 3s ease;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: -10;
 	}
 
 	.img-visible {
-		display: block;
+		// display: block;
+		opacity: 1;
+		z-index: 1;
 	}
 }

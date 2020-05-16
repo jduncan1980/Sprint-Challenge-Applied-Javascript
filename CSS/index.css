@@ -266,10 +266,13 @@ body {
 @media (min-width: 1200px) {
   .carousel {
     width: 1200px;
+    position: relative;
   }
 }
 .carousel .left-button,
 .carousel .right-button {
+  position: relative;
+  z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: none;
@@ -301,8 +304,14 @@ body {
 }
 .carousel img {
   width: 100%;
-  display: none;
+  opacity: 0;
+  transition: all 3s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -10;
 }
 .carousel .img-visible {
-  display: block;
+  opacity: 1;
+  z-index: 1;
 }
