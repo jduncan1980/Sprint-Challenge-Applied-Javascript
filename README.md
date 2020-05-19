@@ -30,41 +30,51 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the DOM?
 
+The DOM is an object-based representation of the HTML document, which allows javaScript (and other languages) to interact with it's structure. It can be thought of like a tree, with a root (the HTML Element), and branches (Head, Body), which branch off into smaller branches (Other elements on the page, such as divs, paragraphs, iamges, etc.),and leaves (the content of those elements). This is known as a "node tree". The DOM is NOT your HTML source code, and often differs from it (ie. when there is bad HTML, which the browser fixes for you, or when it has been modified by JS).
+
 2. What is an event?
+
+An HTML event is an action that the user may perform while visiting your page, such as keyboard entry, mouse clicks, scrolling the page, or even just loading the page. They allow the user to interact with the content of your page.
 
 3. What is an event listener?
 
+An event listener is a piece of code that you write, which is attached to a specific element, and wait's for the user to perform the assigned action (ie a mouse click) on that element, at which time it performs the function (ie. following a link, exposing new content, altering the current content, etc.) that you assign to it.
+
 4. Why would we convert a NodeList into an Array?
+
+The main reason would be that NodeLists, which are Array-Like objects, while having a similar structure to Arrays, do not have access to all the methods that arrays do (ie. map, filter, etc), so we would convert them (usually with the Array.from() method) so as to more efficiently operate on them. They do have their own forEach method, though, which is where they differ from another Array-Like object, the HTMLCollection (which does not even have a forEach method... it is, however a "live" collection, meaning it always points to the current items in the list, as opposed to the nodelist, which is static, and only refers to the objects in it at the time of creation).
 
 5. What is a component?
 
+   A component is a reusable piece of code that can be used to create as many of a certain element as you need. It is a function used to create HTML, assign it's content, classes, attributes, etc... and append it to the DOM (as opposed to just writing the HTML directly).
+
 ### Git Set up
 
-* [ ] Fork the project into your GitHub user account
-* [ ] Clone the forked project into a directory on your machine
-* [ ] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
-* [ ] You are now ready to build this project with your preferred IDE
+- [ ] Fork the project into your GitHub user account
+- [ ] Clone the forked project into a directory on your machine
+- [ ] Create a pull request before you start working on the project requirements. You will continuously push your updates throughout the project.
+- [ ] You are now ready to build this project with your preferred IDE
 
 ## Minimum Viable Product
 
 Your finished project must include all of the following requirements:
 
-* [ ] Look through the HTML code and familiarize yourself with the different sections. Some of them already exist, but some need to be filled in. DO NOT add any code to the HTML file itself.
+- [ ] Look through the HTML code and familiarize yourself with the different sections. Some of them already exist, but some need to be filled in. DO NOT add any code to the HTML file itself.
 
-* [ ] Following the instructions in the `Header/index.js` file, create the Header component.
+- [ ] Following the instructions in the `Header/index.js` file, create the Header component.
 
-* [ ] Following the instructions in the `Tabs/index.js` file, create individual Tabs components.
+- [ ] Following the instructions in the `Tabs/index.js` file, create individual Tabs components.
 
-* [ ] Following the instructions in the `Cards/index.js` file, create individual Cards components.
+- [ ] Following the instructions in the `Cards/index.js` file, create individual Cards components.
 
 ## Stretch Problems
 
 Your stretch challenge is to write the functionality of a `Carousel` component. This is an advanced challenge, so you are not expected to be able to complete it. If you begin and don't finish, you should still submit with what you have. This is going to be a bit different because you are going to need to create some advanced functionality for the carousel. There is no need to request data for this exercise.
 
-* [ ] Complete the carousel functionality in `Carousel.js`
+- [ ] Complete the carousel functionality in `Carousel.js`
 
-* [ ] If you complete the Carousel, add functionality so that the carousel slides when the buttons are pressed instead of just appearing.
+- [ ] If you complete the Carousel, add functionality so that the carousel slides when the buttons are pressed instead of just appearing.
 
-* [ ] Create an 'infinite loop' carousel. In which as long as you click on an arrow, the array of images will loop over itself.
+- [ ] Create an 'infinite loop' carousel. In which as long as you click on an arrow, the array of images will loop over itself.
 
-* [ ] If you have finished the above, research `data attributes`. Implement data attributes within your tabs as well as your cards. Give the tabs functionality so that when they are clicked they filter the cards to only display the cards that contain that topic.
+- [ ] If you have finished the above, research `data attributes`. Implement data attributes within your tabs as well as your cards. Give the tabs functionality so that when they are clicked they filter the cards to only display the cards that contain that topic.
